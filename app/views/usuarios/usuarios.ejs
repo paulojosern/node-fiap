@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>USUARIOS</h1>
+    <table>
+        <tr>
+        <td>Id:</td>
+        <td>Nome: </td>
+        <td>Sobrenome:</td>
+        <td>RG</td>
+        <td>CPF</td>
+        <td>CEP</td>
+        <td>Endereço</td>
+        </tr>
+        <% for(var i=0; i < usuarios.length; i++){ %>
+            <tr>
+            <td><%= usuarios[i].us_id %></td>
+            <td><%= usuarios[i].us_nome %></td>
+            <td><%= usuarios[i].us_sobrenome %></td>
+            <td><%= usuarios[i].us_rg %></td>
+            <td><%= usuarios[i].us_cpf %></td>
+            <td><%= usuarios[i].us_cep %></td>
+            <td><%= usuarios[i].us_endereco %></td>
+            </tr>
+        <%}%>
+
+    </table>
+    <hr>
+    <a href='/cadastrar-usuario'>Cadastrar</a>
+</body>
+</html>

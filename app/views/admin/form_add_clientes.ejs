@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CLIENTES</title>
+</head>
+<body>
+    <% if(validacao) { %>
+        <ul>
+        <% for(var i = 0; i < validacao.length; i++) { %>
+            <li> <%= validacao[i].msg %></li>
+        <% }  %>
+        </ul>
+    <% } %>
+    <h1>SALVAR CLIENTES</h1>
+    <form action="/clientes/salvar" method='POST'>
+        <input type="text" name="cl_nome" id="us_nome" value="<%= clientes.cl_nome %>" placeholder="NOME"/><br />
+        <input type="text" name="cl_sobrenome" id="us_sobrenome" value="<%= clientes.cl_sobrenome %>" placeholder="SOBRENOME"/><br />
+        <input type="text" name="cd_rg" id="us_rg" value="<%= clientes.cd_rg %>" placeholder="RG"/><br />
+        <input type="text" name="cl_cpf" id="us_cpf" value="<%= clientes.cl_cpf %>" placeholder="CPF"/><br />
+        <input type="text" name="cl_cep" id="us_cep" value="<%= clientes.cl_cep %>" placeholder="CEP"/><br />
+        <input type="text" name="cd_endereco" id="us_endereco" value="<%= clientes.cd_endereco %>" placeholder="ENDERECO"/><br />
+        <input type="submit" value="Cadastrar" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% if(validacao) { %>
+        <ul>
+        <% for(var i = 0; i < validacao.length; i++) { %>
+            <li> <%= validacao[i].msg %></li>
+        <% }  %>
+        </ul>
+    <% } %>
+    <h1>SALVAR USUARIO</h1>
+    <form action="/usuarios/salvar" method='POST'>
+        <input type="text" name="us_nome" id="us_nome" value="<%= usuario.us_nome %>" placeholder="NOME"/><br />
+        <input type="text" name="us_sobrenome" id="us_sobrenome" value="<%= usuario.us_sobrenome %>" placeholder="SOBRENOME"/><br />
+        <input type="text" name="us_rg" id="us_rg" value="<%= usuario.us_rg %>" placeholder="RG"/><br />
+        <input type="text" name="us_cpf" id="us_cpf" value="<%= usuario.us_cpf %>" placeholder="CPF"/><br />
+        <input type="text" name="us_cep" id="us_cep" value="<%= usuario.us_cep %>" placeholder="CEP"/><br />
+        <input type="text" name="us_endereco" id="us_endereco" value="<%= usuario.us_endereco %>" placeholder="ENDERECO"/><br />
+        <input type="submit" value="Cadastrar" />
+    </form>
+</body>
+</html>

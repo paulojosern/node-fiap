@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <table>
+        <tr>
+        <td>Id:</td>
+        <td>Nome: </td>
+        <td>Sobrenome:</td>
+        <td>RG</td>
+        <td>CPF</td>
+        <td>CEP</td>
+        <td>Endereço</td>
+        </tr>
+        <% for(var i=0; i < clientes.length; i++){ %>
+            <tr>
+            <td><%= clientes[i].id %></td>
+            <td><%= clientes[i].cl_nome %></td>
+            <td><%= clientes[i].cl_sobrenome %></td>
+            <td><%= clientes[i].cd_rg %></td>
+            <td><%= clientes[i].cl_cpf %></td>
+            <td><%= clientes[i].cl_cep %></td>
+            <td><%= clientes[i].cd_endereco %></td>
+            </tr>
+        <%}%>
+
+    </table>
+    <hr>
+    <a href='/cadastrar-clientes'>Cadastrar</a>
+</body>
+</html>
